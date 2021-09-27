@@ -45,8 +45,8 @@ jobs:
           yarn --version
           
 
-      - name : Check dirictory
-        run: ls -a
+      - name : Runs tests
+        run: yarn test
         
       - name : Check difference between ls -a and ls -la
         run: ls -la
