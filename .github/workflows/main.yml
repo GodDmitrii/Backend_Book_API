@@ -37,7 +37,9 @@ jobs:
             cache: yarn
             # Used to specify the path to a dependency file: package-lock.json, yarn.lock, etc. Supports wildcards or a list of file names for caching multiple dependencies.
             cache-dependency-path: yarn.lock 
-
+      - name : Add jest
+        run: yarn add jest supertest
+              
       - name : Check npm,node and yarn versions
         run : |
           node --version
@@ -46,7 +48,7 @@ jobs:
           
 
       - name : Runs tests
-        run: yarn test
+        run: yarn jest
         
       - name : Check difference between ls -a and ls -la
         run: ls -la
