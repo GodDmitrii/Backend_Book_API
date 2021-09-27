@@ -29,6 +29,9 @@ jobs:
       - name : Check dirictory
         run: ls -a
         
+      - name : Check difference between ls -a and ls -la
+        run: ls -la
+        
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: echo Hello, world!
